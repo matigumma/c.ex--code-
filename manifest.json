@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Code-Element-Parser",
+  "version": "1.0",
+  "description": "Una extensión que identifica las etiquetas <code> y crea un elemento en base a su contenido",
+  "permissions": ["activeTab", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "icon_enabled": "icon-enabled.png",
+    "icon_disabled": "icon-disabled.png",
+    "default_title": "Code-Element-Parser"
+  }
+}
